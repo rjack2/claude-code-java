@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: moviedb
+    volumes:
+      - ./postgres:/docker-entrypoint-initdb.d
+  postgres-mcp:
+    image: crystaldba/postgres-mcp
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URI=postgresql://admin:admin@postgres:5432/moviedb
+    command: ["--access-mode=unrestricted", "--transport=sse"]
+    depends_on:
+      - postgres
+    
