@@ -1,0 +1,13 @@
+Create a Spring Boot CRUD application to manage students.
+
+A student has:
+- name
+- age
+- class
+
+Requirements:
+- REST API: create, update, delete and retrieve students
+- In-memory database
+- Vanilla JS SPA (single HTML file, fetch API, no framework) to manage students
+
+Generate the complete project.
