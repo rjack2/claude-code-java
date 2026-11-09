@@ -2,6 +2,14 @@
   "name": "Claude Code Java Learning",
   "image": "mcr.microsoft.com/devcontainers/java:21",
 
+  "features": {
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "25",
+      "jdkDistro": "tem",
+      "installMaven": "true"
+    }
+  },
+
   "postCreateCommand": "sudo apt-get update && sudo apt-get install -y git-lfs && git lfs install && curl -fsSL https://claude.ai/install.sh | bash",
 
   "remoteEnv": {
