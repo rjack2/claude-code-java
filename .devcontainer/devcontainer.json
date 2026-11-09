@@ -1,0 +1,10 @@
+{
+  "name": "Claude Code Java Learning",
+  "image": "mcr.microsoft.com/devcontainers/java:21",
+
+  "postCreateCommand": "curl -fsSL https://claude.ai/install.sh | bash",
+
+  "remoteEnv": {
+    "PATH": "${containerEnv:HOME}/.local/bin:${containerEnv:PATH}"
+  }
+}
